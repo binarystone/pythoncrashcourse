@@ -11,8 +11,8 @@
 
 def factorial(n):
     result = 1
-    for x in range(1,n+1):
-        result = result * x
+    for i in range(1,n+1):
+        result = result * i
     return result
 
 for n in range(1,10):
