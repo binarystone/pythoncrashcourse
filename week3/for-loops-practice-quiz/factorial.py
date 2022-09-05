@@ -15,5 +15,5 @@ def factorial(n):
         result = result * x
     return result
 
-for n in range(1,10):
+for n in range(0,10):
     print(n, factorial(n))
