@@ -10,11 +10,16 @@ print(newfilenames)
 '''
 
 filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
-newfilenames = []
-for file in filenames:
-  if '.hpp' in file:
-    newfilenames.append((file,file[:-2]))
-  else:
-    newfilenames.append((file,file))
+# Generate newfilenames as a list containing the new filenames
+# using as many lines of code as your chosen method requires.
+newfilenames=[]  
+for filename in filenames:
+    if filename.endswith(".hpp"):
+        filename=filename.replace(".hpp",".h")
+        newfilenames.append(filename)
+    else:
+        newfilenames.append(filename)
 
-print (newfilenames) # Should be [('program.c', 'program.c'), ('stdio.hpp', 'stdio.h'), ('sample.hpp', 'sample.h'), ('a.out', 'a.out'), ('math.hpp', 'math.h'), ('hpp.out', 'hpp.out')]
+
+print(newfilenames) 
+# Should be ["program.c", "stdio.h", "sample.h", "a.out", "math.h", "hpp.out"]
